@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import "./video.css";
+import VideoFooter from "./components/footer/VideoFooter";
 
 function Video() {
   const videoRef = useRef(null);
@@ -21,9 +22,12 @@ function Video() {
         className="video__player"
         ref={videoRef}
         onClick={handleStart}
-        src="https://firebasestorage.googleapis.com/v0/b/jornada2-eb156.appspot.com/o/ZqU6oFX6.mp4.mp4?alt=media&token=9839e872-2d5e-4da3-9299-17eb2949831d"
+        src="https://privaty.com.br/wp-content/uploads/2023/03/gato-1.mp4"
+        // controls
         loop
       ></video>
+      {/* Sidebar */}
+      <VideoFooter />
     </div>
   );
 }
