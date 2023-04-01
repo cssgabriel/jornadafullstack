@@ -1,8 +1,9 @@
 import React, { useRef, useState } from "react";
-import "./video.css";
 import VideoFooter from "./components/footer/VideoFooter";
+import VideoSidebar from "./components/sidebar/VideoSidebar";
+import "./video.css";
 
-function Video() {
+function Video({ likes, messages, shares, name, description, music, url }) {
   const videoRef = useRef(null);
   const [play, setPlay] = useState(false);
 
@@ -22,12 +23,12 @@ function Video() {
         className="video__player"
         ref={videoRef}
         onClick={handleStart}
-        src="https://privaty.com.br/wp-content/uploads/2023/03/gato-1.mp4"
+        src={url}
         // controls
         loop
       ></video>
-      {/* Sidebar */}
-      <VideoFooter />
+      <VideoSidebar likes={likes} messages={messages} shares={shares} />
+      <VideoFooter name={name} description={description} music={music} />
     </div>
   );
 }
