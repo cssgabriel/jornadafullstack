@@ -30,7 +30,7 @@
   position: absolute;
   bottom: 5px;
   right: 20px;
-  height: 50px;
+  height: calc(var(--container-width) * 0.125);
   filter: invert(1);
   animation: spinTheRecord 3s infinite linear;
 }
