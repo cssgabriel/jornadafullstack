@@ -13,3 +13,9 @@
 .videoSidebar__options svg {
   font-size: calc(var(--container-width) * 0.085);
 }
+
+@media only screen and (max-width: 440px) {
+  .videoSidebar {
+    top: 46%;
+  }
+}
